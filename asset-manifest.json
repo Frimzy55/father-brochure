@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/funeral-brochure/static/css/main.ab5c1365.css",
-    "main.js": "/funeral-brochure/static/js/main.eae42ac7.js",
+    "main.js": "/funeral-brochure/static/js/main.fc78eda0.js",
     "static/js/453.2ca86739.chunk.js": "/funeral-brochure/static/js/453.2ca86739.chunk.js",
+    "static/media/father.png": "/funeral-brochure/static/media/father.b621789069886ba71d8a.png",
+    "static/media/mother.jpeg": "/funeral-brochure/static/media/mother.aa59c8f2d74f62b7cc95.jpeg",
     "index.html": "/funeral-brochure/index.html",
     "main.ab5c1365.css.map": "/funeral-brochure/static/css/main.ab5c1365.css.map",
-    "main.eae42ac7.js.map": "/funeral-brochure/static/js/main.eae42ac7.js.map",
+    "main.fc78eda0.js.map": "/funeral-brochure/static/js/main.fc78eda0.js.map",
     "453.2ca86739.chunk.js.map": "/funeral-brochure/static/js/453.2ca86739.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab5c1365.css",
-    "static/js/main.eae42ac7.js"
+    "static/js/main.fc78eda0.js"
   ]
 }
