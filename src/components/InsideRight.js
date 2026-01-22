@@ -1,6 +1,7 @@
 import React from "react";
 import { fatherData } from "../data";
 import "bootstrap/dist/css/bootstrap.min.css";
+import motherPhoto from '../images/mother.jpeg';
 
 export default function InsideRight() {
   // Sample tribute text if none provided
@@ -118,11 +119,7 @@ export default function InsideRight() {
                 
                 <div className="mother-photo-container position-relative mx-auto">
                   <div className="photo-frame">
-                    <img 
-                      src={fatherData.motherPhoto || "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"} 
-                      alt="Mother" 
-                      className="mother-photo img-fluid rounded"
-                    />
+                    <img src={motherPhoto} alt="mother" className="main-photo img-fluid rounded-circle" />
                   </div>
                   
                   {/* Decorative corners */}

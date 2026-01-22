@@ -2,6 +2,13 @@ import React from "react";
 import { fatherData } from "../data";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Import child photos - adjust paths as needed
+import child1Photo from '../images/father.png';
+import child2Photo from '../images/father.png';
+import child3Photo from '../images/father.png';
+import child4Photo from '../images/father.png';
+// Add more imports as needed
+
 export default function InsideLeft() {
   const serviceOrder = [
     { time: "10:00 AM", event: "Opening Prayer", icon: "fas fa-hands-praying" },
@@ -12,6 +19,15 @@ export default function InsideLeft() {
     { time: "11:05 AM", event: "Musical Interlude", icon: "fas fa-play" },
     { time: "11:10 AM", event: "Offertory", icon: "fas fa-hand-holding-heart" },
     { time: "11:20 AM", event: "Closing Prayer", icon: "fas fa-cross" }
+  ];
+
+  // Array of imported child photos (or fallback to data if provided)
+  const childPhotos = [
+    child1Photo,
+    child2Photo,
+    child3Photo,
+    child4Photo
+    // Add more as needed
   ];
 
   // Helper function to get service description
@@ -127,9 +143,9 @@ export default function InsideLeft() {
                 <div className="border-top border-secondary flex-grow-1"></div>
               </div>
               
-              {/* Children photos grid */}
+              {/* Children photos grid - using imported photos */}
               <div className="row g-3 children-photos">
-                {fatherData.childrenPhotos && fatherData.childrenPhotos.map((photo, index) => (
+                {childPhotos.map((photo, index) => (
                   <div key={index} className="col-6 col-sm-4">
                     <div className="child-photo-container position-relative">
                       <img 

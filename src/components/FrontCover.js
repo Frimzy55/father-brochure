@@ -1,6 +1,7 @@
 import React from "react";
 import { fatherData } from "../data";
 import "bootstrap/dist/css/bootstrap.min.css";
+import fatherPhoto from '../images/father.png';
 
 export default function FrontCover() {
   return (
@@ -21,12 +22,8 @@ export default function FrontCover() {
             {/* Main Photo with elegant frame */}
             <div className="mb-4">
               <div className="photo-frame mx-auto d-flex align-items-center justify-content-center">
-                <img 
-                  src={fatherData.fatherPhoto} 
-                  alt="Father" 
-                  className="main-photo img-fluid rounded-circle"
-                  style={{width: "200px", height: "200px", objectFit: "cover"}}
-                />
+                
+             <img src={fatherPhoto} alt="Father" className="main-photo img-fluid rounded-circle" />
               </div>
             </div>
             
