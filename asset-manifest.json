@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/funeral-brochure/static/css/main.ab5c1365.css",
+    "main.js": "/funeral-brochure/static/js/main.eae42ac7.js",
+    "static/js/453.2ca86739.chunk.js": "/funeral-brochure/static/js/453.2ca86739.chunk.js",
+    "index.html": "/funeral-brochure/index.html",
+    "main.ab5c1365.css.map": "/funeral-brochure/static/css/main.ab5c1365.css.map",
+    "main.eae42ac7.js.map": "/funeral-brochure/static/js/main.eae42ac7.js.map",
+    "453.2ca86739.chunk.js.map": "/funeral-brochure/static/js/453.2ca86739.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab5c1365.css",
+    "static/js/main.eae42ac7.js"
+  ]
+}
