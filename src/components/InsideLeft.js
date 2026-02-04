@@ -2,15 +2,11 @@ import React from "react";
 import { fatherData } from "../data";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Import child photos - adjust paths as needed
-import child1Photo from '../images/philimon.jpeg';
-import child2Photo from '../images/Beatrice.jpeg';
-import child3Photo from '../images/Joseph.jpeg';
-//import child4Photo from '../images/father.png';
-// Add more imports as needed
-
 export default function InsideLeft() {
-  // Part 1: Funeral Service at Chapel/Grounds
+
+  // ================================
+  // Part 1: Chapel Service
+  // ================================
   const chapelService = [
     { time: "10:00 AM", event: "Opening Prayer", icon: "fas fa-hands-praying" },
     { time: "10:05 AM", event: "Choruses: Led by the Praise Team", icon: "fas fa-music" },
@@ -29,7 +25,9 @@ export default function InsideLeft() {
     { time: "12:40 PM", event: "Closing Prayer & Benediction", icon: "fas fa-cross" }
   ];
 
-  // Part 2: Burial & Committal at Cemetery
+  // ================================
+  // Part 2: Cemetery Service
+  // ================================
   const cemeteryService = [
     { time: "1:00 PM", event: "Procession to the Cemetery", icon: "fas fa-car-side" },
     { time: "1:10 PM", event: "Opening Prayer", icon: "fas fa-hands-praying" },
@@ -40,216 +38,188 @@ export default function InsideLeft() {
     { time: "1:55 PM", event: "Closing Prayer", icon: "fas fa-cross" }
   ];
 
-  // Array of imported child photos
-  const childPhotos = [
-    child1Photo,
-    child2Photo,
-    child3Photo,
-    
-    // Add more as needed
-  ];
-
-  // Helper function to get child names
-  const getChildName = (index) => {
-    const childNames = ["Michael", "Sarah", "David", "Jessica", "Robert", "Emily"];
-    return childNames[index] || `Child ${index + 1}`;
-  };
-
   return (
     <div className="page inside-left">
-      <div className="container-fluid h-100 py-4">
-        <div className="row h-100">
+      <div className="container-fluid py-4">
+        <div className="row g-4">
 
-          {/* Left Column - Order of Service */}
-          <div className="col-md-7 pe-md-4 border-end border-light-subtle">
-            <div className="mb-4">
-              {/* Time and Location */}
-              <div className="text-center mb-4">
-                <p className="mb-1 text-muted">
-                  <i className="fas fa-clock me-2"></i>
-                  {fatherData.serviceDate || "Saturday, December 30, 2023"} at {fatherData.serviceTime || "10:00 AM"}
-                </p>
-                <p className="mb-0 text-muted">
-                  <i className="fas fa-location-dot me-2"></i>
-                  {fatherData.serviceLocation || "St. Mary's Cathedral, 123 Main Street"}
-                </p>
-              </div>
+          {/* ================= LEFT COLUMN ================= */}
+          <div className="col-md-7 border-end border-light-subtle">
 
-              {/* Part 1: Chapel Service */}
-              <div className="mb-4">
-                <h4 className="text-center mb-3">Part 1: The Funeral Service (At the Chapel/Grounds)</h4>
-                <div className="service-timeline">
-                  {chapelService.map((item, index) => (
-                    <div key={index} className="timeline-item d-flex mb-3">
-                      <div className="timeline-time pe-3 text-end" style={{ width: "100px" }}>
-                        <span className="text-dark fw-medium">{item.time}</span>
-                      </div>
-                      <div className="timeline-content ps-3 position-relative flex-grow-1">
-                        <div className="timeline-connector position-absolute start-0 top-0 h-100 d-flex align-items-center">
-                          <div className="timeline-dot bg-secondary rounded-circle" style={{ width: "12px", height: "12px" }}></div>
-                          <div className="timeline-line bg-secondary ms-1" style={{ width: "2px", height: "100%" }}></div>
-                        </div>
-                        <div className="ms-4">
-                          <div className="d-flex align-items-center mb-1">
-                            <i className={`${item.icon} me-2 text-secondary`}></i>
-                            <h5 className="mb-0">{item.event}</h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Part 2: Cemetery Service */}
-              <div className="mb-4">
-                <h4 className="text-center mb-3">Part 2: The Burial & Committal (At the Cemetery)</h4>
-                <div className="service-timeline">
-                  {cemeteryService.map((item, index) => (
-                    <div key={index} className="timeline-item d-flex mb-3">
-                      <div className="timeline-time pe-3 text-end" style={{ width: "100px" }}>
-                        <span className="text-dark fw-medium">{item.time}</span>
-                      </div>
-                      <div className="timeline-content ps-3 position-relative flex-grow-1">
-                        <div className="timeline-connector position-absolute start-0 top-0 h-100 d-flex align-items-center">
-                          <div className="timeline-dot bg-secondary rounded-circle" style={{ width: "12px", height: "12px" }}></div>
-                          <div className="timeline-line bg-secondary ms-1" style={{ width: "2px", height: "100%" }}></div>
-                        </div>
-                        <div className="ms-4">
-                          <div className="d-flex align-items-center mb-1">
-                            <i className={`${item.icon} me-2 text-secondary`}></i>
-                            <h5 className="mb-0">{item.event}</h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
+            {/* Header */}
+            <div className="text-center mb-4">
+              <p className="mb-1 text-muted">
+                <i className="fas fa-clock me-2"></i>
+                {fatherData.serviceDate || "Saturday, February 14, 2026"} at {fatherData.serviceTime || "9:00 AM"}
+              </p>
+              <p className="mb-0 text-muted">
+                <i className="fas fa-location-dot me-2"></i>
+                {fatherData.serviceLocation || "CAC NO:1 ASAMANKESE"}
+              </p>
             </div>
 
-            {/* Officiant Section */}
-            <div className="mt-4 pt-3 border-top border-light-subtle">
-              <h5 className="text-secondary mb-2">
+            {/* Chapel Service */}
+            <h4 className="section-title">Funeral Service (Chapel/Grounds)</h4>
+            <div className="service-timeline mb-4">
+              {chapelService.map((item, index) => (
+                <TimelineItem key={index} item={item} />
+              ))}
+            </div>
+
+            {/* Cemetery Service */}
+            <h4 className="section-title">Burial & Committal (Cemetery)</h4>
+            <div className="service-timeline">
+              {cemeteryService.map((item, index) => (
+                <TimelineItem key={index} item={item} />
+              ))}
+            </div>
+
+            {/* Officiant */}
+            <div className="mt-4 pt-3 border-top border-light-subtle text-center">
+              <h5 className="text-secondary">
                 <i className="fas fa-user-tie me-2"></i>
-                Officiant
+                Officiating Minister
               </h5>
-              <p className="mb-0">{fatherData.officiant || "Rev. Dr. James Wilson"}</p>
+              <p className="mb-0 fw-semibold">
+                {fatherData.officiant || "Rev. Paul Birifo"}
+              </p>
             </div>
           </div>
 
-          {/* Right Column - Children Section */}
-          <div className="col-md-5 ps-md-4 d-flex flex-column">
-            <div className="mb-4">
-              <h3 className="text-center mb-3">Beloved Children</h3>
+          {/* ================= RIGHT COLUMN ================= */}
+          <div className="col-md-5">
 
-              <div className="row g-3 children-photos">
-                {childPhotos.map((photo, index) => (
-                  <div key={index} className="col-6 col-sm-4">
-                    <div className="child-photo-container position-relative">
-                      <img
-                        src={photo}
-                        alt={`Child ${index + 1}`}
-                        className="img-fluid rounded-circle border border-3 border-light shadow-sm"
-                        style={{ width: "100%", aspectRatio: "1", objectFit: "cover" }}
-                      />
-                      <div className="child-name-overlay position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 text-white text-center py-1 rounded-bottom">
-                        <small>{getChildName(index)}</small>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            {/* Children */}
+            <div className="card shadow-sm border-0 mb-4">
+              <div className="card-body text-center">
+                <h4 className="mb-3">Beloved Children</h4>
 
-              <div className="mt-3">
-                <ul className="list-unstyled">
-                  {fatherData.childrenNames && fatherData.childrenNames.map((name, index) => (
-                    <li key={index} className="d-flex align-items-center mb-2">
-                      <i className="fas fa-heart text-secondary me-2" style={{ fontSize: "0.8rem" }}></i>
-                      <span>{name}</span>
+                <ul className="list-unstyled children-list">
+                  {(fatherData.childrenNames || [
+                    "Philomon Yeboah",
+                    "Beatrice Osafo",
+                    "Joseph Frimpong"
+                  ]).map((name, index) => (
+                    <li key={index}>
+                      <i className="fas fa-heart me-2 text-secondary"></i>
+                      {name}
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
 
-            {/* Spouse Section */}
+            {/* Spouse */}
             {fatherData.spouseName && (
-              <div className="mt-auto pt-4 border-top border-light-subtle">
-                <h5 className="text-secondary mb-2">
-                  <i className="fas fa-ring me-2"></i>
-                  Loving Spouse
-                </h5>
-                <p className="mb-0 fs-5">{fatherData.spouseName}</p>
-                {fatherData.marriageYears && (
-                  <p className="text-muted small mb-0">
-                    Married for {fatherData.marriageYears} years
+              <div className="card shadow-sm border-0 text-center">
+                <div className="card-body">
+                  <h5 className="text-secondary">
+                    <i className="fas fa-ring me-2"></i>
+                    Loving Spouse
+                  </h5>
+                  <p className="fs-4 fw-semibold mb-1">
+                    {fatherData.spouseName}
                   </p>
-                )}
+                  {fatherData.marriageYears && (
+                    <small className="text-muted">
+                      Married for {fatherData.marriageYears} years
+                    </small>
+                  )}
+                </div>
               </div>
             )}
+
           </div>
         </div>
       </div>
 
-      {/* Custom Styles */}
+      {/* ================= Timeline Component ================= */}
       <style jsx>{`
         .inside-left {
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-          min-height: 100vh;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(135deg,#f8f9fa,#eef1f4);
+          min-height:100vh;
+          font-family:'Crimson Text',serif;
         }
-        .service-timeline {
-          max-height: 400px;
-          overflow-y: auto;
-          padding-right: 10px;
+
+        .section-title{
+          text-align:center;
+          margin-bottom:20px;
+          font-weight:600;
+          letter-spacing:0.5px;
         }
-        .service-timeline::-webkit-scrollbar {
-          width: 4px;
+
+        .service-timeline{
+          max-height:420px;
+          overflow-y:auto;
+          padding-right:10px;
         }
-        .service-timeline::-webkit-scrollbar-track {
-          background: #f1f1f1;
-          border-radius: 10px;
+
+        .timeline-item{
+          display:flex;
+          margin-bottom:14px;
         }
-        .service-timeline::-webkit-scrollbar-thumb {
-          background: #c1c1c1;
-          border-radius: 10px;
+
+        .timeline-time{
+          width:95px;
+          text-align:right;
+          font-weight:500;
         }
-        .service-timeline::-webkit-scrollbar-thumb:hover {
-          background: #a1a1a1;
+
+        .timeline-content{
+          position:relative;
+          flex-grow:1;
+          padding-left:20px;
         }
-        .timeline-connector {
-          left: 6px;
+
+        .timeline-dot{
+          width:10px;
+          height:10px;
+          background:#6c757d;
+          border-radius:50%;
+          position:absolute;
+          left:0;
+          top:6px;
         }
-        .child-photo-container {
-          transition: transform 0.3s ease;
+
+        .children-list li{
+          padding:8px 0;
+          font-size:1.05rem;
+          border-bottom:1px solid #eee;
         }
-        .child-photo-container:hover {
-          transform: translateY(-3px);
-        }
-        .child-photo-container:hover .child-name-overlay {
-          background-color: rgba(44, 62, 80, 0.9);
-        }
-        @media (max-width: 768px) {
-          .border-end {
-            border-right: none !important;
-            border-bottom: 1px solid #dee2e6;
-            padding-bottom: 2rem;
-            margin-bottom: 2rem;
+
+        @media(max-width:768px){
+          .border-end{
+            border-right:none!important;
+            border-bottom:1px solid #dee2e6;
+            padding-bottom:2rem;
           }
-          .service-timeline {
-            max-height: none;
-          }
-          .timeline-time {
-            width: 80px !important;
+          .service-timeline{
+            max-height:none;
           }
         }
       `}</style>
 
-      {/* Fonts and Icons */}
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Crimson+Text&display=swap" rel="stylesheet" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    </div>
+  );
+}
+
+
+/* ================= Timeline Item Component ================= */
+function TimelineItem({ item }) {
+  return (
+    <div className="timeline-item">
+      <div className="timeline-time">{item.time}</div>
+
+      <div className="timeline-content">
+        <div className="timeline-dot"></div>
+
+        <div className="d-flex align-items-center">
+          <i className={`${item.icon} me-2 text-secondary`}></i>
+          <span>{item.event}</span>
+        </div>
+      </div>
     </div>
   );
 }

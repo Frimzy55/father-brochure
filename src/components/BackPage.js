@@ -10,21 +10,21 @@ export default function BackPage() {
   const funeralDetails = [
     { 
       title: "Funeral Service", 
-      details: fatherData.serviceLocation || "St. Mary's Cathedral", 
+      details: fatherData.serviceLocation || "CAC N0:1 ASAMANKESE", 
       time: fatherData.serviceTime || "10:00 AM",
-      date: fatherData.serviceDate || "Saturday, December 30, 2023",
+      date: fatherData.serviceDate || "Saturday, February 14, 2026",
       icon: "fas fa-church"
     },
     { 
       title: "Burial Service", 
-      details: fatherData.cemetery || "Memorial Gardens Cemetery", 
+      details: fatherData.cemetery || "Asamankese Cemetery", 
       time: "Following funeral service",
       date: "",
       icon: "fas fa-cross"
     },
     { 
       title: "Reception", 
-      details: fatherData.receptionLocation || "Community Hall", 
+      details: fatherData.receptionLocation || "Opposite Ozeko Junction", 
       time: "12:30 PM",
       date: "",
       icon: "fas fa-utensils"
@@ -33,8 +33,8 @@ export default function BackPage() {
 
   // Pallbearers
   const pallbearers = [
-    "Michael Smith", "David Johnson", "Robert Williams", 
-    "James Brown", "Thomas Davis", "Christopher Miller"
+    "Mr Osafo Kantanka", "Mr Emmanuel Yeboah(USA)", "Mr Seth Yeboah"
+    
   ];
 
   // Charity information
@@ -221,7 +221,7 @@ export default function BackPage() {
                       <div className="d-flex align-items-center mb-2">
                         <i className="fas fa-user text-muted me-2" style={{width: "20px"}}></i>
                         <small style={{fontFamily: "'Crimson Text', serif"}}>
-                          {fatherData.primaryContact || "The Smith Family"}
+                          {fatherData.primaryContact || "The Yeboah's Family"}
                         </small>
                       </div>
                       {fatherData.contactEmail && (
@@ -253,7 +253,7 @@ export default function BackPage() {
                       <p className="small text-muted mb-0" style={{fontFamily: "'Crimson Text', serif"}}>
                         {fatherData.funeralHome || "Peaceful Rest Funeral Home"}
                         <br />
-                        {fatherData.funeralHomeAddress || "123 Memorial Drive, Anytown, USA"}
+                        {fatherData.funeralHomeAddress || "Opposite Ozeko -Junction ,Asamankese"}
                       </p>
                     </div>
                   </div>
