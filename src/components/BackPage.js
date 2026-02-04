@@ -277,6 +277,9 @@ export default function BackPage() {
             <p className="text-muted small mb-0">
               Forever in our hearts • Eternally remembered
             </p>
+             <p className="text-muted small mb-0">
+              Designed by Joseph Frimpong || 0552424591
+            </p>
           </div>
         </div>
       </div>
