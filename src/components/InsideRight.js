@@ -6,7 +6,7 @@ import motherPhoto from "../images/mother.jpeg";
 // 👉 CHILDREN IMAGES
 import child1 from "../images/philimon.jpeg";
 import child2 from "../images/Beatrice.jpeg";
-import child3 from "../images/Joseph.jpeg";
+import child3 from "../images/joe.jpg";
 
 export default function InsideRight() {
   const defaultTribute = `John was a man of unwavering integrity, boundless compassion, and quiet strength. For 45 years, he was the loving husband to Margaret, a devoted father to his four children, and a pillar of the community.`;
